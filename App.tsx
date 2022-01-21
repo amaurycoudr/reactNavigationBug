@@ -18,7 +18,7 @@ const Tab = createMaterialTopTabNavigator();
 
 const TabNavigator = () => {
   return (
-    <Tab.Navigator screenOptions={{lazy: true}}>
+    <Tab.Navigator>
       <Tab.Screen name="home" component={HomeScreen} />
       <Tab.Screen name="settings" component={SettingsScreen} />
     </Tab.Navigator>
@@ -26,7 +26,7 @@ const TabNavigator = () => {
 };
 
 const StackNavigator = () => (
-  <Stack.Navigator screenOptions={{animationEnabled: false}}>
+  <Stack.Navigator>
     <Stack.Screen name="tabNavigator" component={TabNavigator} />
     <Stack.Screen
       name="bug"
@@ -35,6 +35,7 @@ const StackNavigator = () => (
     />
   </Stack.Navigator>
 );
+
 function App() {
   return (
     <NavigationContainer>
